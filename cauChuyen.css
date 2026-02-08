@@ -19,7 +19,7 @@
 body {
     background: var(--green-bg);
     color: var(--text-dark);
-    line-height: 1.7;
+    line-height: 1.5;
 }
 
 /* =====================
@@ -28,7 +28,7 @@ body {
 .site-header {
     background: #ffffff;
     border-bottom: 1px solid var(--green-border);
-    padding: 24px 16px;
+    padding: 0px 16px;
 }
 
 .header-inner {
@@ -37,8 +37,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 24px;
-}
+  }
 
 /* Brand: logo + tiêu đề (LUÔN NẰM NGANG) */
 .brand {
@@ -49,7 +48,7 @@ body {
 
 .brand-logo {
     width: 130px;
-    height: 100px;
+    height: auto;
     flex-shrink: 0;
 }
 
@@ -67,7 +66,7 @@ body {
 
 /* Logo OCOP */
 .ocop img {
-    width: 160px;
+    width: 140px;
     height: auto;
 }
 
@@ -76,7 +75,7 @@ body {
 ===================== */
 main {
     max-width: 1200px;
-    margin: 80px auto;
+    margin: 35px auto;
     padding: 0 16px;
 }
 
@@ -97,7 +96,7 @@ main {
 }
 
 .story-text h2 {
-    font-size: 28px;
+    font-size: 25px;
     margin-bottom: 16px;
     color: var(--green-main);
 }
@@ -167,7 +166,12 @@ main {
     }
 
     .brand-text h1 {
-        font-size: 35px;
+        font-size: 21px;
+    }
+
+    .brand-text p {
+    font-size: 14px;
+    color: #ff2a2a;
     }
 }
 
@@ -176,18 +180,28 @@ main {
 ===================== */
 @media (max-width: 375px) {
 
-    .brand-logo,
     .ocop img {
         width: 96px;
     }
+    .brand-logo {
+    width: 110px;
+    height: auto;
+    flex-shrink: 0;
+    }
 
     .brand-text p {
-    font-size: 11px;
+    font-size: 14px;
     color: #ff2a2a;
-}
+    }
 
     .brand-text h1 {
-        font-size: 28px;
+        font-size: 23px;
+    }
+
+    .story-text h2 {
+    font-size: 27px;
+    margin-bottom: 16px;
+    color: var(--green-main);
     }
 }
 
