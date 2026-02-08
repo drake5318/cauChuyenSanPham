@@ -1,0 +1,193 @@
+/* =====================
+   BIẾN MÀU & RESET
+===================== */
+:root {
+    --green-main: #2e7d32;
+    --green-bg: #f3f9f3;
+    --green-border: #e0efe0;
+    --text-dark: #222;
+    --text-muted: #666;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", "Segoe UI", sans-serif;
+}
+
+body {
+    background: var(--green-bg);
+    color: var(--text-dark);
+    line-height: 1.7;
+}
+
+/* =====================
+   HEADER
+===================== */
+.site-header {
+    background: #ffffff;
+    border-bottom: 1px solid var(--green-border);
+    padding: 24px 16px;
+}
+
+.header-inner {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+}
+
+/* Brand: logo + tiêu đề (LUÔN NẰM NGANG) */
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 0px;
+}
+
+.brand-logo {
+    width: 150px;
+    height: auto;
+    flex-shrink: 0;
+}
+
+.brand-text h1 {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--green-main);
+    line-height: 1.2;
+}
+
+.brand-text p {
+    font-size: 20px;
+    color: #ff2a2a;
+}
+
+/* Logo OCOP */
+.ocop img {
+    width: 160px;
+    height: auto;
+}
+
+/* =====================
+   MAIN / STORY
+===================== */
+main {
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 0 16px;
+}
+
+.story-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+    margin-bottom: 96px;
+}
+
+.story-block.reverse {
+    direction: rtl;
+}
+
+.story-block.reverse * {
+    direction: ltr;
+}
+
+.story-text h2 {
+    font-size: 28px;
+    margin-bottom: 16px;
+    color: var(--green-main);
+}
+
+.story-text p {
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.story-image {
+    text-align: center;
+}
+
+.caption1 {
+    font-size: 14px;
+    color: #555;
+    margin-top: 0px;
+}
+
+.story-image img {
+    width: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+/* =====================
+   FOOTER
+===================== */
+.site-footer {
+    background: var(--green-main);
+    color: #ffffff;
+    text-align: center;
+    padding: 40px 16px;
+}
+
+.site-footer p {
+    margin-bottom: 8px;
+    font-size: 15px;
+}
+
+/* =====================
+   MOBILE (≤768px)
+===================== */
+@media (max-width: 768px) {
+
+    /* Header xếp dọc nhưng BRAND VẪN NGANG */
+    .header-inner {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .brand {
+        justify-content: center;
+    }
+
+    /* Logo OCOP xuống hàng dưới */
+    .ocop {
+        margin-top: 16px;
+    }
+
+    /* Story 1 cột */
+    .story-block {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        margin-bottom: 64px;
+    }
+
+    .brand-text h1 {
+        font-size: 35px;
+    }
+}
+
+/* =====================
+   MOBILE NHỎ (≤375px)
+===================== */
+@media (max-width: 375px) {
+
+    .brand-logo,
+    .ocop img {
+        width: 96px;
+    }
+
+    .brand-text p {
+    font-size: 11px;
+    color: #ff2a2a;
+}
+
+    .brand-text h1 {
+        font-size: 28px;
+    }
+}
+
