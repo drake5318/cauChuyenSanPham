@@ -48,8 +48,8 @@ body {
 }
 
 .brand-logo {
-    width: 150px;
-    height: auto;
+    width: 130px;
+    height: 100px;
     flex-shrink: 0;
 }
 
